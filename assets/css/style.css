@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* Variables: */
+:root{
+    /* font size */
+    --font20 : 1.25rem;
+    --font24 : 1.5rem;
+    --font32 : 2rem;
+    --font38 : 2.375rem;
+
+    /* color */
+    --red: red;
+    --black: black;
+    --white: white;
+    --gray: rgb(70, 69, 67) ;
+    --yellow: rgba(240, 221, 46, 0.849);
+}
+
+/* General style: */
+html{
+    background: url(../images/bg.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    font-size: 16px;
+}
+
+h1{
+    font-size: var(--font38);
+    font-weight: 700;
+    color: var(--gray);
+}
+
+p{
+    font-size: var(--font24);
+    font-weight: 700;
+    color: var(--black);
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -----------start header----------- */
+.header-wrapper{
+    text-align: center;
+    padding-top: 3em;
+    margin-bottom: 5%;
+    position: relative;
+}
+
+.header-wrapper::after{
+    content: "";
+    width: 20%;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    position: absolute;
+    left: calc(50% - 10%);
+}
+
+.header-wrapper .header-title{
+    margin-bottom: 1%;
+}
+
+.header-wrapper .header-description{
+    margin-bottom: 1.5%;
+}
+/* -----------end header----------- */
+
+/* -----------start main----------- */
+.main-wrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.main-wrapper .clock-frame{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-left: 10px solid var(--black);
+    border-right: 10px solid var(--white);
+    box-shadow: 0px 40px 50px var(--gray);
+    background-color: var(--gray);
+    position: relative;
+}
+
+.main-wrapper .clock-frame .arm{
+    color: transparent;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform-origin: bottom center;
+    position: absolute;
+}
+#sec-arm{
+    width: 2px;
+    height: 130px;
+    top: 20px;
+    left: calc(50% - 1px);
+    z-index: 1;
+    background-color: var(--red);
+    transform: rotate(0deg);
+}
+#min-arm{
+    width: 4px;
+    height: 110px;
+    top: 40px;
+    left: calc(50% - 2px);
+    z-index: 2;
+    background-color: var(--yellow);
+    transform: rotate(0deg);
+}
+#hour-arm{
+    width: 6px;
+    height: 80px;
+    top: 70px;
+    left: calc(50% - 3px);
+    z-index: 3;
+    background-color: var(--yellow);
+    transform: rotate(0deg);
+}
+#centerpoint{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    z-index: 4;
+}
+
+.main-wrapper .clock-num ul{
+    list-style: none;
+}
+.main-wrapper .clock-num li{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.main-wrapper .clock-num .normal-num{
+    font-size: var(--font24);
+    font-weight: 500;
+}
+.main-wrapper .clock-num .black-num{
+    color: var(--black);
+}
+.main-wrapper .clock-num .white-num{
+    color: var(--white);
+}
+.main-wrapper .clock-num .bold-num{
+    font-size: var(--font32);
+    font-weight: 700;
+    color: var(--yellow);
+}
+#one{
+    top: 10%;
+    right: 25%;
+}
+#two{
+    top: 26%;
+    right: 10%;
+}
+#three{
+    top: calc(50% - 16px);
+    right: 5%;
+}
+#four{
+    bottom: 28%;
+    right: 10%;
+}
+#five{
+    bottom: 12%;
+    right: 24%;
+}
+#six{
+    bottom: 8%;
+    right: calc(50% - 10px);
+}
+#seven{
+    bottom: 12%;
+    left: 24%;
+}
+#eight{
+    bottom: 28%;
+    left: 10%;
+}
+#nine{
+    top: calc(50% - 15px);
+    left: 5%;
+}
+#ten{
+    top: 26%;
+    left: 10%;
+}
+#eleven{
+    top: 10%;
+    left: 24%;
+}
+#twelve{
+    top: 3%;
+    right: calc(50% - 5px);
+}
+
+/* -----------end main----------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
